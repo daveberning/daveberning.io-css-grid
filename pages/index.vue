@@ -14,9 +14,8 @@
 
     <section class="work">
       <div class="container works">
-        <Card :key="work" bkg-color="000" image="m80" class="card" />
-        <Card :key="work" bkg-color="f5f5f5" image="caldwell" class="card" />
-        <Card :key="work" :lum="-.2" bkg-color="DDE152" image="m80" class="card" />
+        <Card v-for="company in companies" :key="company.image" :lum="company.lum" :bkg-color="company.bkgColor"
+              :image="company.image" class="card" />
       </div>
     </section>
 
@@ -51,6 +50,11 @@ export default {
   data() {
     return {
       pJSON,
+      companies: [
+        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
+        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
+        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 }
+      ]
     }
   }
 }
@@ -69,7 +73,7 @@ export default {
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
   font-family: 'Roboto', sans-serif;
-  background: rgba(#356a7a, 1);
+  background: rgba(#0F6F88, 1);
   padding: 0 0 4rem 0;
 }
 
