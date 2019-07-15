@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  grid-column: 1 / span 12;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.code p { margin-bottom: 0; }
