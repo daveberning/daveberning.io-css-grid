@@ -1,5 +1,5 @@
 <template>
-  <div :style="`background: ${ColorLuminance(bkgColor, lum)}`" class="card">
+  <div :style="`background: ${adjustBrightness(bkgColor, lum)}`" class="card">
     <img :src="`/${image}-logo.png`" alt="">
 
     <div class="hover">
@@ -13,12 +13,12 @@ import Code from '~/components/Code'
 
 export default {
   components: {
-    Code,
+    Code
   },
   props: {
     bkgColor: { required: true, type: String },
     image: { required: true, type: String },
-    lum: { required: false, type: Number, default: -.25 }
+    lum: { required: false, type: Number, default: 0 }
   },
   data() {
     return {
@@ -26,19 +26,38 @@ export default {
     }
   },
   methods: {
-    ColorLuminance(hex, lum) {
-    	hex = String(hex).replace(/[^0-9a-f]/gi, '');
-    	if (hex.length < 6) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-      lum = lum || 0;
+    adjustBrightness(col, amt) {
 
-    	let rgb = "#", c, i;
-    	for (i = 0; i < 3; i++) {
-    		c = parseInt(hex.substr(i*2,2), 16);
-    		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
-    		rgb += ("00"+c).substr(c.length);
-    	}
+      let usePound = false
 
-    	return rgb;
+      if (col[0] == "#") {
+          col = col.slice(1)
+          usePound = true
+      }
+
+      let R = parseInt(col.substring(0,2),16)
+      let G = parseInt(col.substring(2,4),16)
+      let B = parseInt(col.substring(4,6),16)
+
+      // to make the colour less bright than the input
+      // change the following three "+" symbols to "-"
+      R = R + amt
+      G = G + amt
+      B = B + amt
+
+      if (R > 255) R = 255
+      else if (R < 0) R = 0
+
+      if (G > 255) G = 255
+      else if (G < 0) G = 0
+
+      if (B > 255) B = 255
+      else if (B < 0) B = 0
+
+      const RR = ((R.toString(16).length==1)?`0${R.toString(16)}`:R.toString(16))
+      const GG = ((G.toString(16).length==1)?`0${G.toString(16)}`:G.toString(16))
+      const BB = ((B.toString(16).length==1)?`0${B.toString(16)}`:B.toString(16))
+      return (usePound?"#":"") + RR + GG + BB
     }
   }
 }

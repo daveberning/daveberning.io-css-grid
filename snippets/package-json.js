@@ -2,7 +2,7 @@ import * as packageJSONFile from '../package.json'
 
 // Get package.json and convert to object
 const pJSON = JSON.parse(JSON.stringify(packageJSONFile)).default
-const  dependencies = [ 'nuxt', 'nuxt-ts' ]
+const dependencies = [ 'nuxt', 'nuxt-ts' ]
 
 const formattedDependencies = JSON.stringify(getDependencies(dependencies))
 .replace(/{/g, '{\n    ').replace(/,"/g, ',\n    "').replace(/":"/g, '": "').replace(/"}/g, '"\n  }')
@@ -28,11 +28,11 @@ const packageJSON = `
 `
 
 function getDependencies(dependencies) {
-  let depArr = []
+  const depArr = []
   Object.keys(pJSON.dependencies).forEach((dep) => {
     dependencies.forEach((dependency) => {
       if (dependency === dep) {
-        let obj = {}
+        const obj = {}
 
         obj[dep] = pJSON.dependencies[dep]
         depArr.push(obj)

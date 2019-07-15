@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
 header {
   grid-column: 1 / span 12;
-  background: rgba(#356a7a, 1);
+  background: rgba(#0F6F88, 1);
   padding: 1.5rem 0;
 
   h1,
@@ -31,6 +31,7 @@ header {
     grid-column: 1 / span 5;
     color: #fff;
     font-weight: 900;
+    text-transform: lowercase;
   }
 
   .navigation {
