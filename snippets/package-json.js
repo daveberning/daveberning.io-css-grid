@@ -5,7 +5,10 @@ const pJSON = JSON.parse(JSON.stringify(packageJSONFile)).default
 const dependencies = [ 'nuxt', 'nuxt-ts' ]
 
 const formattedDependencies = JSON.stringify(getDependencies(dependencies))
-.replace(/{/g, '{\n    ').replace(/,"/g, ',\n    "').replace(/":"/g, '": "').replace(/"}/g, '"\n  }')
+.replace(/{/g, '{\n    ')
+.replace(/,"/g, ',\n    "')
+.replace(/":"/g, '": "')
+.replace(/"}/g, '"\n  }')
 
 const packageJSON = `
 {
