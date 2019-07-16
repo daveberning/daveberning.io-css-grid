@@ -14,22 +14,6 @@ export default {
   components: {
     Navigation
   },
-  methods:{
-    scrollHandler (event) {
-      const header = document.querySelector('header')
-      if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
-        header.classList.add('v-toolbar--bgchange')
-      } else if (window.scrollY < 100) {
-        header.classList.remove('v-toolbar--bgchange')
-      }
-    }
-  },
-  created () {
-    if (process.browser) window.addEventListener('scroll', this.scrollHandler)
-  },
-  destroyed () {
-    if (process.browser) window.removeEventListener('scroll', this.scrollHandler)
-  }
 }
 </script>
 
@@ -42,8 +26,6 @@ header {
   background: rgba(#0F6F88, 1);
   padding: 1rem 0;
   z-index: 9999;
-
-  &.v-toolbar--bgchange { background: darken(#0F6F88, 5%); }
 
   h1,
   .navigation { grid-row-start: 1; }
@@ -58,6 +40,7 @@ header {
 
   .navigation {
     grid-column: 5 / span 7;
+    margin-top: .5rem;
   }
 }
 </style>

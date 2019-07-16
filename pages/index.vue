@@ -1,7 +1,5 @@
 <template>
   <div class="wrapper">
-    <Header />
-
     <section class="welcome">
       <div class="container">
         <Code :code="pJSON" />
@@ -12,27 +10,32 @@
       </div>
     </section>
 
-    <section class="work">
+    <section>
       <div class="container works">
         <Card v-for="company in companies" :key="company.image" :lum="company.lum" :bkg-color="company.bkgColor"
               :image="company.image" class="card" />
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>Their Words, Not Mine</h2>
+        <p>David is a huge asset to Bearcast Media…His ‘always on’ work ethic is invaluable and he’s never failed to make himself available whenever I’ve needed him. Such ease of communication is hard to find in a coworker, not to mention ambition.</p>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import pJSON from '~/snippets/package-json.js'
+import Logo from '~/components/Logo.vue'
 import Card from '~/components/Card'
-import Header from '~/components/Header'
 import Code from '~/components/Code'
 
 export default {
   components: {
     Logo,
     Card,
-    Header,
     Code
   },
   data() {
@@ -42,12 +45,12 @@ export default {
         { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
         { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
         { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
-        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
         { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
         { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
         { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
         { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
+        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
+        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
       ]
     }
   }
@@ -63,13 +66,19 @@ export default {
 }
 
 .welcome {
-  margin-top: 4.25rem;
+  margin: 4.25rem 0 4rem 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
   font-family: 'Roboto', sans-serif;
   background: rgba(#0F6F88, 1);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   padding: 0 0 4rem 0;
+  height: 90%;
+
+  p {
+    line-height: 2.5rem;
+  }
 }
 
 .code {
@@ -80,6 +89,7 @@ export default {
   border-radius: 6px;
   color: #fff;
   margin-top: 1rem;
+  height: 110%;
 }
 
 .card {
@@ -122,7 +132,7 @@ export default {
 
 section {
   padding: 4rem 0;
-  grid-column: 2 / span 10;
+  grid-column: 1 / span 12;
 }
 
 .about {
@@ -151,4 +161,22 @@ section {
     grid-column: 1 / span 12;
   }
 }
+
+.testimonials {
+  padding-top: 7rem;
+  background: #f5f5f5;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  h2,
+  p {
+    grid-column: 1 / span 12;
+  }
+}
+
 </style>

@@ -1,6 +1,25 @@
 <template>
-  <nuxt/>
+  <div>
+    <!-- <Wave /> -->
+    <Header />
+    <nuxt />
+    <Footer />
+  </div>
 </template>
+
+<script>
+import Wave from '~/components/Wave'
+import Header from '~/components/Header'
+import Footer from '~/components/Footer'
+
+export default {
+  components: {
+    Wave,
+    Header,
+    Footer
+  }
+}
+</script>
 
 <style>
 html {
