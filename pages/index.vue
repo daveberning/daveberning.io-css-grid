@@ -63,7 +63,7 @@ export default {
 }
 
 .welcome {
-  margin-top: 5.25rem;
+  margin-top: 4.25rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;

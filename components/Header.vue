@@ -15,20 +15,20 @@ export default {
     Navigation
   },
   methods:{
-    handleSCroll (event) {
+    scrollHandler (event) {
       const header = document.querySelector('header')
       if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
-      header.classList.add('v-toolbar--bgchange')
+        header.classList.add('v-toolbar--bgchange')
       } else if (window.scrollY < 100) {
         header.classList.remove('v-toolbar--bgchange')
       }
     }
   },
   created () {
-    window.addEventListener('scroll', this.handleSCroll)
+    if (process.browser) window.addEventListener('scroll', this.scrollHandler)
   },
   destroyed () {
-    window.removeEventListener('scroll', this.handleSCroll)
+    if (process.browser) window.removeEventListener('scroll', this.scrollHandler)
   }
 }
 </script>
@@ -41,8 +41,9 @@ header {
   grid-column: 1 / span 12;
   background: rgba(#0F6F88, 1);
   padding: 1rem 0;
+  z-index: 9999;
 
-  &.v-toolbar--bgchange { background: darken(#0F6F88, 10%); }
+  &.v-toolbar--bgchange { background: darken(#0F6F88, 5%); }
 
   h1,
   .navigation { grid-row-start: 1; }
