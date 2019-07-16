@@ -18,18 +18,6 @@
               :image="company.image" class="card" />
       </div>
     </section>
-
-    <section class="about">
-      <div class="container">
-        <h1>About Dave</h1>
-        <img src="~/assets/dave.jpg" alt="">
-        <div>
-          <p>I'm Dave Berning, a web developer and designer from Cincinnati, OH. I specialize in front-end web development that adapts to all mobile and desktop devices. I graduated from the University of Cincinnati with a Bachelor's Degree of Fine Arts with certifications in web production, video production, and electronic design.</p>
-
-          <p>I have worked with several companies over the years, each one giving me valuable experience and new skills. Some of these companies include KalioCommerce, Hobsons Educational Solutions, Upright Communications, and Drees Homes. My philosophy is that every great website should have a simple UI and be written with clean code.</p>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -51,9 +39,15 @@ export default {
     return {
       pJSON,
       companies: [
+        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
+        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
         { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
         { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 }
+        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
+        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
+        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
+        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
+        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
       ]
     }
   }
@@ -69,6 +63,7 @@ export default {
 }
 
 .welcome {
+  margin-top: 5.25rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;

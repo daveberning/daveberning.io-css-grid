@@ -14,9 +14,10 @@ const packageJSON = `
   "version": "27.0",
   "dependencies": ${formattedDependencies},
   "devDependencies": {
-    "coffee": "^1.0"
-    "dale": "3.0",
-    "hank": "2.0"
+    "coffee": "^1.0",
+    "macOS": "^10.17",
+    "webstorm": "^2019.02",
+    "vs-code": "^1.0.0"
   },
   "favoriteBands": {
     "green-day": "1994.02",

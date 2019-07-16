@@ -13,6 +13,22 @@ import Navigation from '~/components/Navigation'
 export default {
   components: {
     Navigation
+  },
+  methods:{
+    handleSCroll (event) {
+      const header = document.querySelector('header')
+      if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
+      header.classList.add('v-toolbar--bgchange')
+      } else if (window.scrollY < 100) {
+        header.classList.remove('v-toolbar--bgchange')
+      }
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleSCroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleSCroll)
   }
 }
 </script>
@@ -20,9 +36,13 @@ export default {
 
 <style lang="scss">
 header {
+  position: fixed;
+  width: 100%;
   grid-column: 1 / span 12;
   background: rgba(#0F6F88, 1);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+
+  &.v-toolbar--bgchange { background: darken(#0F6F88, 10%); }
 
   h1,
   .navigation { grid-row-start: 1; }
@@ -32,6 +52,7 @@ header {
     color: #fff;
     font-weight: 900;
     text-transform: lowercase;
+    margin-bottom: 0;
   }
 
   .navigation {
