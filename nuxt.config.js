@@ -1,6 +1,13 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/daveberning.io-css-grid/'
+  }
+} : {}
+
 module.exports = {
+  ...routerBase,
   mode: 'universal',
   head: {
     title: 'Dave Berning | Web Developer | Cincinnati',
