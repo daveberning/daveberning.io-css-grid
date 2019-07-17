@@ -1,12 +1,14 @@
 <template>
-  <div class="themes">
-    <div class="theme-buttons" :class="{ expanded: expanded }">
-      <button v-for="(theme, i) in themes" :key="i" @click="changeTheme(theme)" :class="{ selected: $store.state.code.theme === theme }">
-        {{ theme }}
-      </button>
+  <div>
+    <div class="themes">
+      <div class="theme-buttons" :class="{ expanded: expanded }">
+        <button v-for="(theme, i) in themes" :key="i" @click="changeTheme(theme)" :class="{ selected: $store.state.code.theme === theme }">
+          {{ theme }}
+        </button>
+      </div>
+      <button @click="expanded = !expanded">{{ text }}</button>
     </div>
     <div class="overlay" @click="expanded = !expanded" v-if="expanded" />
-    <button @click="expanded = !expanded">{{ text }}</button>
   </div>
 </template>
 
@@ -40,6 +42,7 @@ export default {
   height: 100vh;
   width: 100vw;
   background: transparent;
+  z-index: 9998;
 }
 
 .themes {

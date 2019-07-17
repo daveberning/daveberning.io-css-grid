@@ -1,6 +1,6 @@
 <template>
   <div class="code">
-    <Prism :class="$store.state.code.theme" language="json">{{ code }}</Prism>
+    <Prism :class="$store.state.code.theme" :language="language">{{ code }}</Prism>
   </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
     Prism
   },
   props: {
-    code: { required: true, type: String }
+    code: { required: true, type: String },
+    language: { required: false, type: String }
   },
   mounted() {
     this.$store.dispatch('code/setCodeTheme', 'okaidia')

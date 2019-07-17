@@ -2,7 +2,7 @@
   <div class="wrapper">
     <section class="welcome">
       <div class="container">
-        <Code :code="pJSON" />
+        <Code :code="pJSON" language="json" />
         <div class="intro">
           <p>I'm a developer, designer, and writer from Cincinnati, OH</p>
           <button>Contact Me</button>

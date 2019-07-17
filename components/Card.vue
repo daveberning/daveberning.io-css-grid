@@ -3,7 +3,7 @@
     <img :src="`/${image}-logo.png`" alt="">
 
     <div class="hover">
-      <Code :code="code" />
+      <Code :code="code" language="html" />
     </div>
   </div>
 </template>
