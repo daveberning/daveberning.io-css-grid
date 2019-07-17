@@ -90,7 +90,6 @@ export default {
     display: block;
   }
 
-
   @media screen and (min-width: 768px) {
     grid-column: 1 / span 6;
     grid-row: 2 / span 3;

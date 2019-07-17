@@ -53,10 +53,15 @@ export default {
   background: #252525;
   padding: 1rem;
   border-radius: 6px;
+  display: none;
 
   & > button {
     position: relative;
     z-index: 9999;
+  }
+
+  @media screen and (min-width: 576px) {
+    display: block;
   }
 }
 
