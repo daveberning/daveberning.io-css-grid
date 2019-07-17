@@ -17,11 +17,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { href: "https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap", rel: "stylesheet" }
     ],
-    script: [
-      { src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js' },
-      { src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js' },
-      { src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' }
-    ]
   },
 
   /*

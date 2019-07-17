@@ -13,10 +13,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "babel-plugin-prismjs": "^1.0.2",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
-    "nuxt-ts": "^2.8.1"
+    "nuxt-ts": "^2.8.1",
+    "prismjs": "^1.16.0",
+    "vue-prism-component": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

@@ -4,17 +4,18 @@
     <Header />
     <nuxt />
     <Footer />
+    <ThemeChanger />
   </div>
 </template>
 
 <script>
-import Wave from '~/components/Wave'
+import ThemeChanger from '~/components/ThemeChanger'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 
 export default {
   components: {
-    Wave,
+    ThemeChanger,
     Header,
     Footer
   }
