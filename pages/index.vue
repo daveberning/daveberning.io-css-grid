@@ -17,12 +17,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <h2>Their Words, Not Mine</h2>
-        <p>David is a huge asset to Bearcast Media…His ‘always on’ work ethic is invaluable and he’s never failed to make himself available whenever I’ve needed him. Such ease of communication is hard to find in a coworker, not to mention ambition.</p>
-      </div>
-    </section>
+    <Testimonials />
   </div>
 </template>
 
@@ -31,26 +26,25 @@ import pJSON from '~/snippets/package-json.js'
 import Logo from '~/components/Logo.vue'
 import Card from '~/components/Card'
 import Code from '~/components/Code'
+import Testimonials from '~/components/Testimonials'
 
 export default {
   components: {
     Logo,
     Card,
-    Code
+    Code,
+    Testimonials
   },
   data() {
     return {
       pJSON,
       companies: [
         { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
+        { image: 'kroger-wireless', bkgColor: '#c4e4f9', lum: 0 },
         { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
+        { image: 'bearcast', bkgColor: '#000000', lum: 0 },
         { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
-        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
-        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
-        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
+        { image: 'idd', bkgColor: '#c4e4f9', lum: 0 },
       ]
     }
   }
@@ -72,41 +66,53 @@ export default {
   grid-column: 1 / span 12;
   font-family: 'Roboto', sans-serif;
   background: rgba(#0F6F88, 1);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   padding: 0 0 4rem 0;
   height: 90%;
 
-  p {
-    line-height: 2.5rem;
+  p { line-height: 2.5rem; }
+
+  @media screen and (min-width: 992px) {
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
   }
 }
 
 .code {
-  background: #252525;
-  grid-column: 1 / span 5;
-  grid-row: 2 / span 3;
+  background: #020202;
+  grid-column: 1 / span 12;
   padding: 0 2rem;
   border-radius: 6px;
   color: #fff;
   margin-top: 1rem;
-  height: 110%;
-}
+  display: none;
 
-.card {
-  grid-column: span 4;
-}
+  @media screen and (min-width: 576px) {
+    display: block;
+  }
 
-.container.works {
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 3;
+    margin-top: 1rem;
+    height: 110%;
+  }
+
+  p { margin: 0; }
 }
 
 .intro {
-  grid-column: 7 / span 5;
+  grid-column: 1 / span 12;
   grid-row: 3;
   color: #fff;
   font-weight: 900;
   font-size: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 8 / span 6;
+    text-align: left;
+  }
 
   button {
     background: #41B883;
@@ -118,6 +124,19 @@ export default {
     margin-top: 1rem;
     border-radius: 6px;
   }
+}
+
+.card {
+  grid-column: span 12;
+
+  @media screen and (min-width: 768px) {
+    grid-column: span 4;
+  }
+}
+
+.container.works {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
 .clients {
@@ -134,49 +153,4 @@ section {
   padding: 4rem 0;
   grid-column: 1 / span 12;
 }
-
-.about {
-  div:first-child {
-    background: rgba(#0E7088, 1);
-    grid-column: 2 / span 14;
-    border-radius: 6px;
-    grid-column-gap: 30px;
-    padding: 2rem;
-    color: #fff;
-
-    & > div {
-      grid-column: 4 / span 9;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    grid-column: 1 / span 3;
-    border-radius: 6px;
-  }
-
-  h1,
-  p {
-    grid-column: 1 / span 12;
-  }
-}
-
-.testimonials {
-  padding-top: 7rem;
-  background: #f5f5f5;
-  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
-
-  h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-
-  h2,
-  p {
-    grid-column: 1 / span 12;
-  }
-}
-
 </style>

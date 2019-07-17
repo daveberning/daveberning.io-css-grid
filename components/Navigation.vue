@@ -1,9 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li>Work</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li><nuxt-link to="/">Work</nuxt-link></li>
+      <li><nuxt-link to="/">About</nuxt-link></li>
+      <li><nuxt-link to="/">Contact</nuxt-link></li>
     </ul>
   </nav>
 </template>
@@ -21,9 +21,13 @@ nav {
   grid-column: 7 / span 5;
 
   ul {
-    text-align: right;
+    text-align: center;
     list-style-type: none;
     padding: 0;
+
+    @media screen and (min-width: 768px) {
+      text-align: right;
+    }
 
     li {
       display: inline-block;
@@ -31,6 +35,11 @@ nav {
       color: #fff;
 
       &:last-child { margin-right: 0; }
+    }
+
+    li a {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

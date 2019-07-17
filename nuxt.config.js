@@ -46,6 +46,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-sass-resources-loader', '~/assets/scss/breakpoints.scss'],
   ],
 
   /*

@@ -2,7 +2,7 @@ import * as packageJSONFile from '../package.json'
 
 // Get package.json and convert to object
 const pJSON = JSON.parse(JSON.stringify(packageJSONFile)).default
-const dependencies = [ 'nuxt', 'nuxt-ts' ]
+const dependencies = [ 'nuxt', 'nuxt-ts', 'nuxt-sass-resources-loader' ]
 
 const formattedDependencies = JSON.stringify(getDependencies(dependencies))
 .replace(/{/g, '{\n    ')

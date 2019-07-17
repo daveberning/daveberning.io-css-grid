@@ -15,6 +15,7 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
     "nuxt-ts": "^2.8.1"
   },
   "devDependencies": {

@@ -23,7 +23,7 @@ header {
   position: fixed;
   width: 100%;
   grid-column: 1 / span 12;
-  background: rgba(#0F6F88, 1);
+  background: #0F6F88;
   padding: 1rem 0;
   z-index: 9999;
 
@@ -31,16 +31,30 @@ header {
   .navigation { grid-row-start: 1; }
 
   h1 {
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 12;
     color: #fff;
     font-weight: 900;
     text-transform: lowercase;
     margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 1 / span 5;
+      font-size: 2rem;
+      text-align: left;
+    }
   }
 
   .navigation {
-    grid-column: 5 / span 7;
+    grid-column: 1 / span 12;
     margin-top: .5rem;
+    grid-row-start: 2;
+
+    @media screen and (min-width: 768px) {
+      grid-row-start: 1;
+      grid-column: 5 / span 7;
+    }
   }
 }
 </style>

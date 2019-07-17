@@ -69,6 +69,14 @@ export default {
   padding: 3rem;
   border-radius: 6px;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+   padding: 2rem;
+  }
+
+  @media screen and (min-width: 992px) {
+   padding: 3rem;
+  }
 }
 
 .card:hover {
