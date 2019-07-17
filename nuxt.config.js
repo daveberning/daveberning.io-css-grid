@@ -2,12 +2,8 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: pkg.name,
+    title: 'Dave Berning | Web Developer | Cincinnati',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,39 +14,15 @@ module.exports = {
       { href: "https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap", rel: "stylesheet" }
     ],
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#FFFFFF' },
-
-  /*
-  ** Global CSS
-  */
   css: [
     "~/assets/styles.scss"
   ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-
-  /*
-  ** Nuxt.js modules
-  */
+  plugins: [],
   modules: [
     ['nuxt-sass-resources-loader', '~/assets/scss/breakpoints.scss'],
   ],
-
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
