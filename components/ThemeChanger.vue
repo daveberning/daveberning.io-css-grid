@@ -1,10 +1,11 @@
 <template>
   <div class="themes">
-    <div :class="{ expanded: expanded }">
+    <div class="theme-buttons" :class="{ expanded: expanded }">
       <button v-for="(theme, i) in themes" :key="i" @click="changeTheme(theme)" :class="{ selected: $store.state.code.theme === theme }">
         {{ theme }}
       </button>
     </div>
+    <div class="overlay" @click="expanded = !expanded" v-if="expanded" />
     <button @click="expanded = !expanded">{{ text }}</button>
   </div>
 </template>
@@ -32,6 +33,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+}
+
 .themes {
   position: fixed;
   bottom: 15px;
@@ -47,7 +57,7 @@ export default {
   }
 }
 
-.themes > div {
+.themes > .theme-buttons {
   border-radius: 6px;
   height: 0;
   opacity: 0;
