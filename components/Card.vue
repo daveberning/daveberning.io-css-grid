@@ -104,6 +104,8 @@ img {
   width: 100%;
   height: auto;
 }
+
+a:hover { text-decoration: none; }
 </style>
 
 <style>
