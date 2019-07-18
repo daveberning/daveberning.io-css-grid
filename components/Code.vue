@@ -18,7 +18,7 @@ export default {
     language: { required: false, type: String }
   },
   mounted() {
-    this.$store.dispatch('code/setCodeTheme', 'tomorrow')
+    this.$store.dispatch('code/setCodeTheme', 'okaidia')
   }
 }
 </script>

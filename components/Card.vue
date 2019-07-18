@@ -1,6 +1,6 @@
 <template>
   <div :style="`background: ${adjustBrightness(bkgColor, lum)}`" class="card">
-    <img :src="`/${image}-logo.png`" alt="">
+    <img :src="`${routerBase}/${image}-logo.png`" alt="">
 
     <div class="hover">
       <Code :code="code" language="html" />
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { routerBase } from '~/nuxt.config'
 import Code from '~/components/Code'
 
 export default {
@@ -22,7 +23,8 @@ export default {
   },
   data() {
     return {
-      code: `<!-- View Project -->`
+      code: `<!-- View Project -->`,
+      routerBase: routerBase.router.base
     }
   },
   methods: {

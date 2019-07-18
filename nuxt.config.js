@@ -1,12 +1,16 @@
-const pkg = require('./package')
+import pkg from './package'
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+export const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/daveberning.io-css-grid/'
   }
-} : {}
+} : {
+  router: {
+    base: ''
+  }
+}
 
-module.exports = {
+export default {
   ...routerBase,
   mode: 'universal',
   head: {
