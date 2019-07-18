@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li><nuxt-link to="/">Writing</nuxt-link></li>
+      <li><nuxt-link to="/work">Writing</nuxt-link></li>
       <li><nuxt-link to="/">About</nuxt-link></li>
       <li><nuxt-link to="/">Contact</nuxt-link></li>
     </ul>

@@ -16,7 +16,7 @@
 export default {
   data() {
     return {
-      themes: [ 'dark', 'coy', 'funky', 'okaidia', 'solarizedlight', 'tomorrow', 'twilight' ],
+      themes: [ 'dark', 'funky', 'okaidia', 'solarizedlight', 'tomorrow', 'twilight' ],
       expanded: false
     }
   },

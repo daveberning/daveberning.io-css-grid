@@ -35,7 +35,7 @@ export default {
 
 .code {
   background: #252525;
-  padding: 0 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 6px;
   color: #fff;
 }
@@ -48,7 +48,7 @@ code {
 pre[class*="language-"] {
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {

@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <h1>@daveberning</h1>
+      <h1><nuxt-link to="/">@daveberning</nuxt-link></h1>
       <Navigation class="navigation"/>
     </div>
   </header>
@@ -29,6 +29,11 @@ header {
 
   h1,
   .navigation { grid-row-start: 1; }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 
   h1 {
     grid-column: 1 / span 12;
