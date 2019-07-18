@@ -119,7 +119,6 @@ section {
     background: #0F6F88;
     color: #fff;
     padding: .75rem 1.5rem;
-    font-style: italic;
     font-size: 1.25rem;
     border-radius: 6px;
     text-align: center;

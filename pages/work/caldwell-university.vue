@@ -3,19 +3,19 @@
     <div slot="tldr">
       <h2>Caldwell University</h2>
       <ul>
-        <li><strong>Location:</strong> Cincinnati, Ohio</li>
+        <li><strong>Location:</strong> Caldwell, New Jersey</li>
         <li><strong>Role:</strong> Web Developer</li>
-        <li><strong>Type:</strong> Custom Wordpress Theme</li>
-        <li><strong>Date:</strong> July 2016</li>
-        <li><strong>Features:</strong> Custom Wordpress theme that uses the Wordpress codex and functions. Portfolio pieces when clicked, dropdown to show a slider with additional information.</li>
+        <li><strong>Type:</strong> Web Development, Interactive</li>
+        <li><strong>Date:</strong> August 2013</li>
+        <li><strong>Features:</strong> Interactive CSS card flips, animations with GreenSock Library.</li>
       </ul>
       <a href="#">Visit Website</a>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">
-      <p>M80, Inc is an industrial design company located in Cincinnati, OH. I was approached by M80, Inc designer, Brett Valls to consult with and develop the new and improved company website. It was important for the client to be able to update the site themselves easily. This site was handcrafted and built on top of the Wordpress CMS.</p>
+      <p>During my time as a web developer at Hobsons Educational Solutions, I created various micro-sites like Caldwell University, University of Oregon, and Palm Beach Atlantic University. These micro-sites are single page websites that use JavaScript to animate between the different “pages.”</p>
 
-      <p>M80’s site uses a preprocessor (SASS) and SASS variables to easily modify the styles of the site in just a few seconds. M80 is the first client of my freelance business, Parsec Digital Media, LLC and the first project to utilize an architecture. The style sheet was written with an object-oriented mindset. The admin can add, remove, or change the look of various elements just by changing a class name.</p>
+      <p>Interactive cards are used to provide the user with additional information about enrollment, social life, and living expenses for the college life at Caldwell. Transition and card flip animations are achieved using the GreenSock JavaScript Library. Caldwell University also utilizes Modernizr for greater browser support.</p>
     </div>
     <div slot="full-width-content">
       <img src="~/assets/m80-responsive.png" alt="">
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import page from '~/layout/work'
+import page from '~/layout/detail-page'
 import TLDR from '~/components/TLDR'
 import Code from '~/components/Code'
 
@@ -40,11 +40,15 @@ export default {
       code:
 `<p>Technologies Used</p>
 <ul>
-  <li>Nuxt.js</li>
-  <li>TypeScript</li>
+  <li>Greensock Animation Framework</li>
   <li>SCSS</li>
-  <li>Bootstrap 4</li>
+  <li>jQuery</li>
 </ul>`
+    }
+  },
+  head() {
+    return {
+      title: 'Caldwell University | Dave Berning | Cincinnati, OH'
     }
   }
 }

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import page from '~/layout/work'
+import page from '~/layout/detail-page'
 import TLDR from '~/components/TLDR'
 import Code from '~/components/Code'
 
@@ -45,6 +45,11 @@ export default {
   <li>SCSS</li>
   <li>Bootstrap 4</li>
 </ul>`
+    }
+  },
+  head() {
+    return {
+      title: 'M80 Inc | Dave Berning | Cincinnati, OH'
     }
   }
 }

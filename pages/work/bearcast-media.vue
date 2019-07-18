@@ -4,18 +4,20 @@
       <h2>Bearcast Media</h2>
       <ul>
         <li><strong>Location:</strong> Cincinnati, Ohio</li>
-        <li><strong>Role:</strong> Web Developer</li>
-        <li><strong>Type:</strong> Custom Wordpress Theme</li>
-        <li><strong>Date:</strong> July 2016</li>
-        <li><strong>Features:</strong> Custom Wordpress theme that uses the Wordpress codex and functions. Portfolio pieces when clicked, dropdown to show a slider with additional information.</li>
+        <li><strong>Role:</strong> Web Developer, Project Manager</li>
+        <li><strong>Type:</strong> Wordpress, Custom Theme, Editorial</li>
+        <li><strong>Date:</strong> February 2014</li>
+        <li><strong>Features:</strong> iOS/Android icons, Microsoft Live Tile Integration, Radio Streaming, Live Sports Broadcasts, Dynamic Content, Responsive Design, Author Pages, and more</li>
       </ul>
       <a href="#">Visit Website</a>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">
-      <p>M80, Inc is an industrial design company located in Cincinnati, OH. I was approached by M80, Inc designer, Brett Valls to consult with and develop the new and improved company website. It was important for the client to be able to update the site themselves easily. This site was handcrafted and built on top of the Wordpress CMS.</p>
+      <p>During Bearcast Media’s re-branding campaign I was handpicked and asked by it’s General Manager to design and develop the new website. This new site replaced the outdated one by improving the user experience, user interface, and presentation. Bearcast Media’s website launched in February, 2014 and has several new features including, mobile compatibility, social media integration, iOS/Android app icons, and Facebook OpenGraph support for sharing.</p>
 
-      <p>M80’s site uses a preprocessor (SASS) and SASS variables to easily modify the styles of the site in just a few seconds. M80 is the first client of my freelance business, Parsec Digital Media, LLC and the first project to utilize an architecture. The style sheet was written with an object-oriented mindset. The admin can add, remove, or change the look of various elements just by changing a class name.</p>
+      <p>Users can share, save, and interact the Bearcast website in one seamless interaction. By signing into either a Facebook or Twitter account, readers can log into Bearcast and post comments and share opinions on various articles.</p>
+
+      <p>Since launch, Bearcast’s online and social presence has increased tremendously resulting in increased local and global recognition.</p>
     </div>
     <div slot="full-width-content">
       <img src="~/assets/m80-responsive.png" alt="">
@@ -24,7 +26,7 @@
 </template>
 
 <script>
-import page from '~/layout/work'
+import page from '~/layout/detail-page'
 import TLDR from '~/components/TLDR'
 import Code from '~/components/Code'
 
@@ -40,11 +42,16 @@ export default {
       code:
 `<p>Technologies Used</p>
 <ul>
-  <li>Nuxt.js</li>
-  <li>TypeScript</li>
+  <li>Wordpress</li>
+  <li>jQuery</li>
   <li>SCSS</li>
-  <li>Bootstrap 4</li>
+  <li>Bootstrap 3</li>
 </ul>`
+    }
+  },
+  head() {
+    return {
+      title: 'Bearcast Media | Dave Berning | Cincinnati, OH'
     }
   }
 }

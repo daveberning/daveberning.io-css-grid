@@ -17,9 +17,6 @@ export default {
     code: { required: true, type: String },
     language: { required: false, type: String }
   },
-  mounted() {
-    this.$store.dispatch('code/setCodeTheme', 'okaidia')
-  }
 }
 </script>
 
@@ -51,7 +48,10 @@ pre[class*="language-"] {
   margin: 0 0 1rem 0;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: none;
+:not(pre) > code[class*="language-"], pre[class*="language-"],
+code[class*="language-"] {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 </style>
