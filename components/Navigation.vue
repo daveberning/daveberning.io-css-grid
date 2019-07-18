@@ -18,7 +18,11 @@ export default {
 <style lang="scss" scoped>
 nav {
   color: #fff;
-  grid-column: 7 / span 5;
+  grid-column: 1 / span 12;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 7 / span 5;
+  }
 
   ul {
     text-align: center;
