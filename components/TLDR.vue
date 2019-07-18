@@ -1,12 +1,10 @@
 <template>
-  <div :style="`background: ${bkgColor}`" class="card">
-    <img :src="`${routerBase}/${image}-logo.png`" alt="">
-
-    <div class="hover">
-      <nuxt-link :to="`${link}`">
-        <Code :code="code" language="html" />
-      </nuxt-link>
+  <div class="info">
+    <div>
+      <slot />
     </div>
+
+    <Code :code="code" language="html" />
   </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
   props: {
     bkgColor: { required: true, type: String },
     image: { required: true, type: String },
-    link: { required: true, type: String },
+    lum: { required: false, type: Number, default: 0 }
   },
   data() {
     return {
@@ -69,49 +67,57 @@ export default {
 
 
 <style lang="scss" scoped>
-.card {
-  padding: 3rem;
-  border-radius: 6px;
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-column: 1 / span 5;
+  grid-row: 1;
   position: relative;
+  top: -100px;
 
-  @media screen and (min-width: 768px) {
-   padding: 2rem;
+  & > div:first-child {
+    background: darken(#0F6F88, 7%);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    align-self: start;
+    margin-bottom: 1rem;
   }
 
-  @media screen and (min-width: 992px) {
-   padding: 3rem;
+  * {
+    grid-column: 1 / span 2;
   }
-}
 
-.card:hover {
-  .hover {
-    opacity: 1;
-    transition: opacity .25s ease;
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
-}
 
-.hover {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  top: 0; left: 0;
-  transition: opacity .25s ease;
-  cursor: pointer;
-}
+  ul {
+    padding: 0;
+    list-style: none;
 
-img {
-  width: 100%;
-  height: auto;
-}
-</style>
+    li {
+      margin-bottom: 1rem;
+      line-height: 1.5rem;
+    }
+  }
 
-<style>
-.hover .code {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  a {
+    grid-column: span 2;
+    background: #0F6F88;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    font-style: italic;
+    font-size: 1.25rem;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: block;
+  }
 }
 </style>
 

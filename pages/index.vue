@@ -12,8 +12,8 @@
 
     <section>
       <div class="container works">
-        <Card v-for="company in companies" :key="company.image" :lum="company.lum" :bkg-color="company.bkgColor"
-              :image="company.image" class="card" />
+        <Card v-for="company in companies" :key="company.image" :bkg-color="company.bkgColor"
+              :image="company.image" :link="company.link" class="card" />
       </div>
     </section>
 
@@ -39,12 +39,12 @@ export default {
     return {
       pJSON,
       companies: [
-        { image: 'drees-homes', bkgColor: '#bae0d3', lum: 0 },
-        { image: 'kroger-wireless', bkgColor: '#c4e4f9', lum: 0 },
-        { image: 'm80', bkgColor: '#f3f5c3', lum: 0 },
-        { image: 'bearcast', bkgColor: '#000000', lum: 0 },
-        { image: 'caldwell', bkgColor: '#ffccd5', lum: 0 },
-        { image: 'idd', bkgColor: '#c4e4f9', lum: 0 },
+        { image: 'drees-homes', bkgColor: '#bae0d3', link: '/work/drees-homes' },
+        { image: 'kroger-wireless', bkgColor: '#c4e4f9', link: '/work/kroger-wireless' },
+        { image: 'm80', bkgColor: '#f3f5c3', link: '/work/m80' },
+        { image: 'bearcast', bkgColor: '#000000', link: '/work/bearcast-media' },
+        { image: 'caldwell', bkgColor: '#ffccd5', link: '/work/caldwell-university' },
+        { image: 'idd', bkgColor: '#c4e4f9', link: '/work/ideal-due-dilligence' },
       ]
     }
   }
@@ -70,7 +70,10 @@ export default {
   padding: 0 0 4rem 0;
   height: 90%;
 
-  p { line-height: 2.5rem; }
+  p {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+  }
 
   @media screen and (min-width: 992px) {
     clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
@@ -105,7 +108,6 @@ export default {
   grid-row: 3;
   color: #fff;
   font-weight: 900;
-  font-size: 2rem;
   text-align: center;
 
   @media screen and (min-width: 768px) {
