@@ -2,7 +2,7 @@
   <page>
     <div slot="tldr">
       <h1>Contact</h1>
-      <p>I am currently taking freelance projects. Let's grab some coffee and chat about your project.</p>
+      <p>I am currently taking freelance projects. Let's grab some coffee and chat about your project. <font-awesome-icon far icon="spinner" /></p>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">

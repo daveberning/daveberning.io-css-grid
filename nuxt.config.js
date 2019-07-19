@@ -27,9 +27,12 @@ export default {
   },
   loading: { color: '#FFFFFF' },
   css: [
-    "~/assets/styles.scss"
+    "~/assets/styles.scss",
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ],
   modules: [
     '@nuxtjs/style-resources',
   ],
