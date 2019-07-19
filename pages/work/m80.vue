@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>M80, Inc.</h2>
+      <h1>M80, Inc.</h1>
       <ul>
         <li><strong>Location:</strong> Loveland, Ohio</li>
         <li><strong>Role:</strong> Web Developer</li>

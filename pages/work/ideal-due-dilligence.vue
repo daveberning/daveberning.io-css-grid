@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Ideal Due Dilligence</h2>
+      <h1>Ideal Due Dilligence</h1>
       <ul>
         <li><strong>Location:</strong> Cincinnati, Ohio</li>
         <li><strong>Role:</strong> Web Developer</li>

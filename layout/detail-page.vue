@@ -100,7 +100,7 @@ section {
 
   * { grid-column: 1 / span 2; }
 
-  h2 {
+  h1 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     text-transform: uppercase;

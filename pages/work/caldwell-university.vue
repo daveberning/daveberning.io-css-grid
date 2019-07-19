@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Caldwell University</h2>
+      <h1>Caldwell University</h1>
       <ul>
         <li><strong>Location:</strong> Caldwell, New Jersey</li>
         <li><strong>Role:</strong> Web Developer</li>

@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Drees Homes</h2>
+      <h1>Drees Homes</h1>
       <ul>
         <li><strong>Location:</strong> Cincinnati, Ohio</li>
         <li><strong>Role:</strong> Web Developer</li>

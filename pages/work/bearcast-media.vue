@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Bearcast Media</h2>
+      <h1>Bearcast Media</h1>
       <ul>
         <li><strong>Location:</strong> Cincinnati, Ohio</li>
         <li><strong>Role:</strong> Web Developer, Project Manager</li>

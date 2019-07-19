@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Kroger Wireless</h2>
+      <h1>Kroger Wireless</h1>
       <ul>
         <li><strong>Location:</strong> Cincinnati, Ohio</li>
         <li><strong>Role:</strong> Web Developer</li>

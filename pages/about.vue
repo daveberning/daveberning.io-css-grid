@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="tldr">
-      <h2>Dave Berning</h2>
+      <h1>Dave Berning</h1>
       <img src="~/assets/dave.jpg" />
       <ul>
         <li><strong>Employer:</strong> Oodle</li>
