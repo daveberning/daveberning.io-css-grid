@@ -118,15 +118,9 @@ section {
 
   a {
     grid-column: span 2;
-    background: $cta;
-    color: #fff;
-    padding: .75rem 1.5rem;
-    font-size: 1.25rem;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 1rem;
     display: block;
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 

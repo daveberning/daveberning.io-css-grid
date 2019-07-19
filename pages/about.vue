@@ -9,7 +9,7 @@
         <li><strong>Degree:</strong> B.F.A. in Electronic Media</li>
         <li><strong>Alma Mater:</strong> The University of Cincinnati</li>
       </ul>
-      <a href="#">Download Resume</a>
+      <a href="#" class="button">Download Resume</a>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">

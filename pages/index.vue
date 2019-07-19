@@ -5,7 +5,7 @@
         <Code :code="pJSON" language="json" />
         <div class="intro">
           <p>I'm a developer, designer, and author from Cincinnati, OH</p>
-          <button>Contact Me</button>
+          <button class="button">Contact Me</button>
         </div>
       </div>
     </section>
@@ -109,17 +109,6 @@ export default {
   @media screen and (min-width: $md) {
     grid-column: 8 / span 6;
     text-align: left;
-  }
-
-  button {
-    background: $cta;
-    color: #fff;
-    padding: .75rem 1.5rem;
-    border: 1px solid darken($cta, 10%);
-    font-style: italic;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    border-radius: 6px;
   }
 }
 

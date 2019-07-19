@@ -9,7 +9,7 @@
         <li><strong>Date:</strong> July 2016</li>
         <li><strong>Features:</strong> Custom Wordpress theme that uses the Wordpress codex and functions. Portfolio pieces when clicked, dropdown to show a slider with additional information.</li>
       </ul>
-      <a href="#">Visit Website</a>
+      <a href="#" class="button">Visit Website</a>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">
