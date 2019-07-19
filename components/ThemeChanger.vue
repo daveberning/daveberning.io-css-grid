@@ -60,7 +60,7 @@ export default {
     z-index: 9999;
   }
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $sm) {
     display: block;
   }
 }

@@ -20,7 +20,7 @@ nav {
   color: #fff;
   grid-column: 1 / span 12;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
     grid-column: 7 / span 5;
   }
 
@@ -29,7 +29,7 @@ nav {
     list-style-type: none;
     padding: 0;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $md) {
       text-align: right;
     }
 

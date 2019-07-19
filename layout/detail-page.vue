@@ -57,15 +57,15 @@ export default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
-  font-family: 'Roboto', sans-serif;
-  background: rgba(#0F6F88, 1);
+  font-family: $font-primary;
+  background: $primary;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   padding: 0 0 4rem 0;
   height: 90%;
 
   p { line-height: 2.5rem; }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $lg) {
     margin: 4.25rem 0 4rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   }
@@ -85,12 +85,12 @@ section {
   position: relative;
   top: -100px;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $lg) {
     grid-column: 1 / span 5;
   }
 
   & > div:first-child {
-    background: darken(#0F6F88, 7%);
+    background: $primary-dark;
     color: #fff;
     padding: 2rem;
     border-radius: 6px;
@@ -98,9 +98,7 @@ section {
     margin-bottom: 1rem;
   }
 
-  * {
-    grid-column: 1 / span 2;
-  }
+  * { grid-column: 1 / span 2; }
 
   h2 {
     margin-bottom: 1.5rem;
@@ -120,7 +118,7 @@ section {
 
   a {
     grid-column: span 2;
-    background: #ea692e;
+    background: $cta;
     color: #fff;
     padding: .75rem 1.5rem;
     font-size: 1.25rem;
@@ -135,9 +133,7 @@ section {
 .content{
   grid-column: 1 / span 12;
 
-  @media screen and (min-width: 992px) {
-    grid-column: 6 / span 7;
-  }
+  @media screen and (min-width: $lg) { grid-column: 6 / span 7; }
 }
 
 img {

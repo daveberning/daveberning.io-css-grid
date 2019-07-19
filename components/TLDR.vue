@@ -77,7 +77,7 @@ export default {
   top: -100px;
 
   & > div:first-child {
-    background: darken(#0F6F88, 7%);
+    background: $primary-dark;
     color: #fff;
     padding: 2rem;
     border-radius: 6px;
@@ -107,7 +107,7 @@ export default {
 
   a {
     grid-column: span 2;
-    background: #0F6F88;
+    background: $primary;
     color: #fff;
     padding: .75rem 1.5rem;
     font-style: italic;

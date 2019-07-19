@@ -48,7 +48,7 @@ section {
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
   }
 
@@ -78,7 +78,7 @@ section {
     margin: 0 auto;
     grid-column: 6 / span 2;
     margin: 1rem auto 2rem auto;
-    border: 7px solid #0F6F88;
+    border: 7px solid $primary;
   }
 }
 </style>

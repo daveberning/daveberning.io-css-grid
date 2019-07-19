@@ -56,8 +56,8 @@ export default {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
-  font-family: 'Roboto', sans-serif;
-  background: rgba(#0F6F88, 1);
+  font-family: $font-primary;
+  background: $primary;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   padding: 0 0 4rem 0;
   height: 90%;
@@ -67,7 +67,7 @@ export default {
     font-size: 1.5rem;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $lg) {
     clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
   }
 }
@@ -81,11 +81,11 @@ export default {
   margin-top: 1rem;
   display: none;
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $sm) {
     display: block;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
     grid-column: 1 / span 6;
     grid-row: 2 / span 3;
     margin-top: 1rem;
@@ -106,16 +106,16 @@ export default {
     font-size: 2rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
     grid-column: 8 / span 6;
     text-align: left;
   }
 
   button {
-    background: #ea692e;
+    background: $cta;
     color: #fff;
     padding: .75rem 1.5rem;
-    border: 1px solid darken(#ea692e, 10%);
+    border: 1px solid darken($cta, 10%);
     font-style: italic;
     font-size: 1.25rem;
     margin-top: 1rem;
@@ -126,7 +126,7 @@ export default {
 .card {
   grid-column: span 12;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
     grid-column: span 4;
   }
 }

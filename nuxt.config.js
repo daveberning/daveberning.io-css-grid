@@ -31,8 +31,13 @@ export default {
   ],
   plugins: [],
   modules: [
-    ['nuxt-sass-resources-loader', '~/assets/scss/breakpoints.scss'],
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+  scss: [
+    './assets/scss/variables.scss'
+  ],
+ },
   build: {
     extend(config, ctx) {
       // Run ESLint on save
