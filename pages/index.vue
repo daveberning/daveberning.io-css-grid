@@ -12,12 +12,12 @@
 
     <section>
       <div class="container works">
-        <Card v-for="company in companies" :key="company.image" :bkg-color="company.bkgColor"
+        <Card v-for="company in $store.state.companies.companies" :key="company.image" :bkg-color="company.bkgColor"
               :image="company.image" :link="company.link" class="card" />
       </div>
     </section>
 
-    <Testimonials />
+    <Testimonials name="Brett Valls" />
   </div>
 </template>
 
@@ -38,14 +38,6 @@ export default {
   data() {
     return {
       pJSON,
-      companies: [
-        { image: 'drees-homes', bkgColor: '#bae0d3', link: '/work/drees-homes' },
-        { image: 'kroger-wireless', bkgColor: '#c4e4f9', link: '/work/kroger-wireless' },
-        { image: 'm80', bkgColor: '#f3f5c3', link: '/work/m80' },
-        { image: 'bearcast', bkgColor: '#000000', link: '/work/bearcast-media' },
-        { image: 'caldwell', bkgColor: '#ffccd5', link: '/work/caldwell-university' },
-        { image: 'idd', bkgColor: '#c4e4f9', link: '/work/ideal-due-dilligence' },
-      ]
     }
   }
 }
@@ -110,16 +102,20 @@ export default {
   font-weight: 900;
   text-align: center;
 
+  p {
+    font-size: 2rem;
+  }
+
   @media screen and (min-width: 768px) {
     grid-column: 8 / span 6;
     text-align: left;
   }
 
   button {
-    background: #41B883;
+    background: #ea692e;
     color: #fff;
     padding: .75rem 1.5rem;
-    border: 1px solid darken(#41B883, 10%);
+    border: 1px solid darken(#ea692e, 10%);
     font-style: italic;
     font-size: 1.25rem;
     margin-top: 1rem;

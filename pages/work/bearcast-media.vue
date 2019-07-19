@@ -22,6 +22,7 @@
     <div slot="full-width-content">
       <img src="~/assets/m80-responsive.png" alt="">
     </div>
+    <Testimonials slot="testimonial" name="Colin Lutz" />
   </page>
 </template>
 
@@ -29,13 +30,15 @@
 import page from '~/layout/detail-page'
 import TLDR from '~/components/TLDR'
 import Code from '~/components/Code'
+import Testimonials from '~/components/Testimonials'
 
 export default {
   layout: 'work',
   components: {
     page,
     TLDR,
-    Code
+    Code,
+    Testimonials
   },
   data() {
     return {

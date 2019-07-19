@@ -6,7 +6,7 @@
       <ul>
         <li><strong>Employer:</strong> Oodle</li>
         <li><strong>Title:</strong> Web Developer</li>
-        <li><strong>Degree:</strong> B.F.A. of Electronic Media</li>
+        <li><strong>Degree:</strong> B.F.A. in Electronic Media</li>
         <li><strong>Alma Mater:</strong> The University of Cincinnati</li>
       </ul>
       <a href="#">Download Resume</a>

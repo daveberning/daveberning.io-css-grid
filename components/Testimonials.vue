@@ -1,17 +1,42 @@
 <template>
   <section>
     <div class="container">
-      <h2>Her Words, Not Mine</h2>
-      <p>David is a huge asset to Bearcast Media…His ‘always on’ work ethic is invaluable and he’s never failed to make himself available whenever I’ve needed him. Such ease of communication is hard to find in a coworker, not to mention ambition.</p>
-      <img src="~/assets/tess.jpg" alt="">
-      <p><span>Tess White</span><br>Former General Manager of Bearcast Media</p>
+      <h2>{{ pronoun }} Words, Not Mine</h2>
+      <p>{{ person.testimonial }}</p>
+      <img width="100" :src="`${routerBase}/${person.photo}`" alt="">
+      <p><span>{{ person.name }}</span><br>{{ person.title }}</p>
     </div>
   </section>
 </template>
 
 <script>
-export default {
+import { routerBase } from '~/nuxt.config'
 
+export default {
+  props: {
+    name: { type: String, required: false }
+  },
+  data() {
+    return {
+      routerBase: routerBase.router.base
+    }
+  },
+  computed: {
+    person() {
+      if (this.name) {
+        return this.$store.state.testimonials.people.filter((person) => {
+          return person.name === this.name
+        })[0]
+      } else {
+        return this.$store.state.testimonials.people[Math.floor(Math.random() * this.$store.state.testimonials.people.length)]
+      }
+    },
+    pronoun() {
+      if (this.person.gender === 'f') return 'Her'
+      else if (this.person.gender === 'm') return 'His'
+      else return 'Their'
+    },
+  }
 }
 </script>
 

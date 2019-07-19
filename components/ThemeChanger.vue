@@ -70,6 +70,10 @@ export default {
   height: 0;
   opacity: 0;
   transition: all .25s ease;
+
+  & + button {
+    padding: .5rem;
+  }
 }
 
 .themes > div.expanded {
@@ -92,7 +96,9 @@ button {
   margin-bottom: 1rem;
   transition: all .25s ease;
 
-  &:last-child { margin-bottom: 0; }
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &.selected,
   &:hover {

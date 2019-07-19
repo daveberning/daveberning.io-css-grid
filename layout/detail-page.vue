@@ -20,8 +20,7 @@
           </div>
         </div>
       </section>
-
-      <Testimonials />
+      <slot name="testimonial" />
     </div>
   </div>
 </template>
@@ -54,7 +53,7 @@ export default {
 }
 
 .welcome {
-  margin: 4.25rem 0 4rem 0;
+  margin: 1.25rem 0 4rem 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
@@ -67,6 +66,7 @@ export default {
   p { line-height: 2.5rem; }
 
   @media screen and (min-width: 992px) {
+    margin: 4.25rem 0 4rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   }
 }
@@ -80,10 +80,14 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 15px;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 12;
   grid-row: 1;
   position: relative;
   top: -100px;
+
+  @media screen and (min-width: 992px) {
+    grid-column: 1 / span 5;
+  }
 
   & > div:first-child {
     background: darken(#0F6F88, 7%);
@@ -116,7 +120,7 @@ section {
 
   a {
     grid-column: span 2;
-    background: #0F6F88;
+    background: #ea692e;
     color: #fff;
     padding: .75rem 1.5rem;
     font-size: 1.25rem;
@@ -129,7 +133,11 @@ section {
 }
 
 .content{
-  grid-column: 6 / span 7;
+  grid-column: 1 / span 12;
+
+  @media screen and (min-width: 992px) {
+    grid-column: 6 / span 7;
+  }
 }
 
 img {
