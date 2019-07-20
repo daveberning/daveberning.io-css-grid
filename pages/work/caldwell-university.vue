@@ -9,7 +9,7 @@
         <li><strong>Date:</strong> August 2013</li>
         <li><strong>Features:</strong> Interactive CSS card flips, animations with GreenSock Library.</li>
       </ul>
-      <a href="#">Visit Website</a>
+      <a href="#" class="button">Visit Website</a>
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">

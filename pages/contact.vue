@@ -2,9 +2,11 @@
   <page>
     <div slot="tldr">
       <h1>Contact</h1>
-      <p>I am currently taking freelance projects. Let's grab some coffee and chat about your project. <font-awesome-icon :icon="['fab', 'linkedin']" /></p>
+      <p>I am currently taking freelance projects. Let's grab some coffee and chat about your project.</p>
+      <a v-for="profile in $store.state.socialMedia.profiles" :key="profile.name" :style="`background: ${profile.bkgColor}`" href="">
+        <font-awesome-icon :icon="['fab', `${profile.name}`]" />
+      </a>
     </div>
-    <Code slot="code" :code="code" language="html" />
     <div slot="content">
 
     </div>
@@ -23,32 +25,31 @@ export default {
     TLDR,
     Code
   },
-  data() {
-    return {
-      code:
-`<p>Favorite Technologies</p>
-<ul>
-  <li>Vue.js</li>
-  <li>Nuxt.js</li>
-  <li>TypeScript</li>
-  <li>ES6</li>
-  <li>CSS Grid</li>
-</ul>`
-    }
-  },
   head() {
     return {
-      title: 'About Me | Dave Berning | Cincinnati, OH'
+      title: 'Contact Me | Dave Berning | Cincinnati, OH'
     }
   }
 }
 </script>
 
-<style scoped>
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 2rem;
+<style lang="scss" scoped>
+div:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 15px;
+
+  a {
+    color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: $border-radius;
+    font-size: 2.5rem;
+    grid-column: span 1;
+
+    &:last-child {
+      grid-column: span 2;
+    }
+  }
 }
 </style>
