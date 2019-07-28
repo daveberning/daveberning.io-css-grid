@@ -13,15 +13,12 @@
     </div>
     <Code slot="code" :code="code" language="html" />
     <div slot="content">
-      <p>I started my college career at UC Blue Ash and later transferred to the College-Conservatory of Music at main campus. I've accomplished a great deal at UCBA and took up opportunities such as employment within the department, internships, and becoming a Student Ambassador.</p>
+      <p>I'm Dave Berning, a web developer and designer from Cincinnati, OH. I specialize in front-end web development that adapts to all mobile and desktop devices. I graduated from the University of Cincinnati with a Bachelor's Degree of Fine Arts with certifications in web production, video production, and electronic design.</p>
 
-      <p>Becoming a Student Ambassador at UCBA was the best thing I did there. I conducted tours for perspective students and incoming freshman at orientation. It was a chance to represent the college and the university as a whole. As an Ambassador, I've had the privilege of sharing my story to others in the UCBA Viewbook and newspaper ads.</p>
+      <p>I have worked with several companies over the years, each one giving me valuable experience and new skills. Some of these companies include KalioCommerce, Hobsons Educational Solutions, Upright Communications, and Drees Homes. My philosophy is that every great website should have a simple UI and be written with clean code.</p>
 
-      <p>When I transferred to main campus, I joined Bearcast Media, UC's student run media group. I was in charge of redesigning and developing their website as well as maintaining it. After proving myself, I later became the first New Media Director of Bearcast Media, managing a team and overseeing/producing all interactive and online projects for other student groups. I was also named, "Bearcast Media's Director of the Year."</p>
-
-      <p>As part of Bearcast's rebrand, I seek out various university groups in need of online services to further strengthen the UC bond. We want to be known around campus and want to help other groups promote themselves as well. As part of this, I contacted UC's hockey team and am now building their website.</p>
-
-      <p>UC has provided me the great opportunities that I would not be able to take up anywhere else. In my four years at UC, I've grown from a quiet student to a leader in charge of a whole department at an organization. Whether its working for a college, student group or pursing an internship, these opportunities are prepping me for the post-college world. I am Cincinnati Smart.</p>
+      <img src="~/assets/vue.jpg" alt="">
+      <img src="~/assets/bulma.png" alt="">
     </div>
   </page>
 </template>
@@ -65,5 +62,13 @@ img {
   height: auto;
   border-radius: 6px;
   margin-bottom: 2rem;
+}
+
+.content {
+  grid-template-columns: repeat(2, 1fr)
+}
+
+.content img {
+  grid-column: span 1;
 }
 </style>

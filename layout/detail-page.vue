@@ -86,13 +86,13 @@ section {
   top: -100px;
 
   @media screen and (min-width: $lg) {
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 4;
   }
 
   & > div:first-child {
     background: $primary-dark;
     color: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 6px;
     align-self: start;
     margin-bottom: 1rem;
@@ -127,7 +127,7 @@ section {
 .content{
   grid-column: 1 / span 12;
 
-  @media screen and (min-width: $lg) { grid-column: 6 / span 7; }
+  @media screen and (min-width: $lg) { grid-column: 5 / span 8; }
 }
 
 img {

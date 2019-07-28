@@ -40,7 +40,7 @@ export default {
       code:
 `<p>Technologies Used</p>
 <ul>
-  <li>Greensock Animation Framework</li>
+  <li>Greensock (GSAP)</li>
   <li>SCSS</li>
   <li>jQuery</li>
 </ul>`
