@@ -27,7 +27,7 @@
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
     "nuxt-ts": "^2.8.1",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.25.0",
     "vue-prism-component": "^1.1.1"
   },
   "devDependencies": {
