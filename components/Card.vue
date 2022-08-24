@@ -1,7 +1,8 @@
 <template>
   <div :style="`background: ${bkgColor}`" class="card">
-    <img :src="`${routerBase}/${image}-logo.png?query=something`" alt="">
-    <p>Something here</p>
+    <img :src="`${routerBase}/${image}-logo.png`" alt="">
+    <h1>asdasda</h1>
+    <p>asdoaismdasd</p>
     <div class="hover">
       <nuxt-link :to="`${link}`">
         <Code :code="code" language="html" />
