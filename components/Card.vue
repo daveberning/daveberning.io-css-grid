@@ -75,11 +75,11 @@ export default {
   border-radius: 6px;
   position: relative;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $md) {
    padding: 2rem;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $lg) {
    padding: 3rem;
   }
 }

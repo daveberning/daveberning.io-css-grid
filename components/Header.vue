@@ -23,7 +23,7 @@ header {
   position: fixed;
   width: 100%;
   grid-column: 1 / span 12;
-  background: #0F6F88;
+  background: $primary;
   padding: 1rem 0;
   z-index: 9999;
 
@@ -44,7 +44,7 @@ header {
     font-size: 1.5rem;
     text-align: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $md) {
       grid-column: 1 / span 5;
       font-size: 2rem;
       text-align: left;
@@ -56,7 +56,7 @@ header {
     margin-top: .5rem;
     grid-row-start: 2;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $md) {
       grid-row-start: 1;
       grid-column: 5 / span 7;
     }

@@ -33,3 +33,14 @@ p {
 }
 
 .code p { margin-bottom: 0; }
+
+.button {
+  background: $cta;
+  color: #fff;
+  padding: .75rem 1.5rem;
+  border: 1px solid darken($cta, 10%);
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  border-radius: $border-radius;
+  text-decoration: none;
+}

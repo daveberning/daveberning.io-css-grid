@@ -1,14 +1,18 @@
 <template>
   <footer>
     <div class="container">
-      <p>Copyright &copy; 2019. Parsec Digital Media, LLC. All Rights. Reserved.</p>
+      <p>Copyright &copy; {{ year }}. Dave Berning. All Rights. Reserved.</p>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-
+  computed: {
+    year() {
+      return new Date().getFullYear()
+    }
+  }
 }
 </script>
 

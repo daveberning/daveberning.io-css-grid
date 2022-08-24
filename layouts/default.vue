@@ -22,9 +22,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
-  font-family: Roboto, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: $font-primary;
   font-size: 16px;
   word-spacing: 1px;
   box-sizing: border-box;

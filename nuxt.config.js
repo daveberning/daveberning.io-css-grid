@@ -27,23 +27,31 @@ export default {
   },
   loading: { color: '#FFFFFF' },
   css: [
-    "~/assets/styles.scss"
+    "~/assets/styles.scss",
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ],
   modules: [
-    ['nuxt-sass-resources-loader', '~/assets/scss/breakpoints.scss'],
+    '@nuxtjs/style-resources',
   ],
-  build: {
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+  styleResources: {
+  scss: [
+    './assets/scss/variables.scss'
+  ],
+ },
+  // build: {
+  //   extend(config, ctx) {
+  //     // Run ESLint on save
+  //     if (ctx.isDev && ctx.isClient) {
+  //       config.module.rules.push({
+  //         enforce: 'pre',
+  //         test: /\.(js|vue)$/,
+  //         loader: 'eslint-loader',
+  //         exclude: /(node_modules)/
+  //       })
+  //     }
+  //   }
+  // }
 }
